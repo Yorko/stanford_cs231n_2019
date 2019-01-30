@@ -1,6 +1,6 @@
 ![](https://habrastorage.org/webt/jo/r_/3n/jor_3nbxpo34xn2jdmjbttf7zpk.png)
 
-Passing cs231n together. 
+Passing cs231n together within the [OpenDataScience](http://ods.ai) community
 
 **Main links**
 - The [course](http://cs231n.stanford.edu/) itself 
