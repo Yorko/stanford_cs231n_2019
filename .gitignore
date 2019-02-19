@@ -105,6 +105,7 @@ venv.bak/
 
 # shit
 *.DS_Store
+.idea/
 
 # other
 assignment1/comments_by_hand
