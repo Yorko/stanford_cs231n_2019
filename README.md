@@ -1,5 +1,20 @@
 ![](https://habrastorage.org/webt/jo/r_/3n/jor_3nbxpo34xn2jdmjbttf7zpk.png)
 
+# Assignment 1
+ - [k-Nearest Neighbor (kNN) exercise](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/knn_solution_yorko.ipynb) + [comments on some derivations](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/knn_comments_yorko.ipynb)
+ - [Softmax classifier](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/softmax_solution_yorko.ipynb)
+ - [Multi-class SVM](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/svm_solution_yorko.ipynb)
+ - [Two-layer net](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/two_layer_net_solution_yorko.ipynb)
+ - [More features](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/features_solution_yorko.ipynb)
+
+# Assignment 2
+ - [Fully-Connected Neural Nets](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment2/FullyConnectedNets_solution_yorko.ipynb)
+ - [Batch Normalization](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment2/BatchNormalization_solution_yorko.ipynb	)
+ - [Dropout](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment2/Dropout_solution_yorko.ipynb)
+ - [Convolutional Networks](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment2/ConvolutionalNetworks_solution_yorko.ipynb)
+ - [PyTorch convnet](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment2/PyTorch_solution_yorko.ipynb)
+
+
 Passing cs231n together within the [OpenDataScience](http://ods.ai) community
 
 **Main links**
