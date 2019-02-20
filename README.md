@@ -15,7 +15,7 @@
  - [PyTorch convnet](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment2/PyTorch_solution_yorko.ipynb)
 
 
-Passing cs231n together within the [OpenDataScience](http://ods.ai) community
+# Passing cs231n together within the [OpenDataScience](http://ods.ai) community
 
 **Main links**
 - The [course](http://cs231n.stanford.edu/) itself 
