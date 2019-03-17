@@ -14,8 +14,11 @@
  - [Convolutional Networks](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment2/ConvolutionalNetworks_solution_yorko.ipynb)
  - [PyTorch convnet](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment2/PyTorch_solution_yorko.ipynb)
 
+# Assignment 3
+- [Image captioning with RNNs](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment3/RNN_Captioning_solution_yorko.ipynb?flush_cache=true)
 
-# Passing cs231n together within the [OpenDataScience](http://ods.ai) community
+## Passing cs231n together within the [OpenDataScience](http://ods.ai) community
+Next start - from 29.04.2019 till 30.06.2019
 
 **Main links**
 - The [course](http://cs231n.stanford.edu/) itself 
