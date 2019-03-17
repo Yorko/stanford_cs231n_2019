@@ -107,5 +107,9 @@ venv.bak/
 *.DS_Store
 .idea/
 
+# data
+cs231n/datasets/coco_captioning/
+
 # other
 assignment1/comments_by_hand
+
