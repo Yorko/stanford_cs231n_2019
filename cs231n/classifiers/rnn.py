@@ -149,6 +149,8 @@ class CaptioningRNN(object):
         if self.cell_type == 'rnn':
             rnn_hidden, rnn_cache = rnn_forward(captions_in_vec, h0, Wx, Wh, b)
         elif self.cell_type == 'lstm':
+            rnn_hidden, rnn_cache = lstm_forward(captions_in_vec, h0, Wx, Wh, b)
+        else:
             pass
 
         # forward (4)
@@ -163,7 +165,12 @@ class CaptioningRNN(object):
         grad_hidden, grad_w_vocab, grad_b_vocab = temporal_affine_backward(grad_loss, vocab_cache)
 
         # backward (3)
-        dx, dh0, dWx, dWh, db = rnn_backward(grad_hidden, rnn_cache)
+        if self.cell_type == 'rnn':
+            dx, dh0, dWx, dWh, db = rnn_backward(grad_hidden, rnn_cache)
+        elif self.cell_type == 'lstm':
+            dx, dh0, dWx, dWh, db = lstm_backward(grad_hidden, rnn_cache)
+        else:
+            pass
 
         # backward (2)
         grad_w_embed = word_embedding_backward(dx, w2v_cache)
@@ -242,6 +249,9 @@ class CaptioningRNN(object):
         ###########################################################################
 
         prev_hidden = features.dot(W_proj) + b_proj
+        if self.cell_type == 'lstm':
+            prev_cell_state = np.zeros([N, int(Wh.shape[1] / 4)])
+
         prev_word = self._start
         captions[: 0] = self._start
 
@@ -250,7 +260,13 @@ class CaptioningRNN(object):
             prev_word_emb, _ = word_embedding_forward(prev_word, W_embed)
 
             # (2)
-            next_hidden, _ = rnn_step_forward(prev_word_emb, prev_hidden, Wx, Wh, b)
+            if self.cell_type == 'rnn':
+                next_hidden, _ = rnn_step_forward(prev_word_emb, prev_hidden, Wx, Wh, b)
+            elif self.cell_type == 'lstm':
+                next_hidden, next_cell_state, _ = lstm_step_forward(prev_word_emb, prev_hidden,
+                                                                    prev_cell_state, Wx, Wh, b)
+            else:
+                pass
 
             # (3)
             scores = next_hidden.dot(W_vocab) + b_vocab   # N x M
@@ -260,6 +276,8 @@ class CaptioningRNN(object):
             captions[:, t] = new_word_ids
 
             prev_hidden = next_hidden
+            if self.cell_type == 'lstm':
+                prev_cell_state = next_cell_state
             prev_word = new_word_ids
 
 

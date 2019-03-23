@@ -207,7 +207,6 @@ def word_embedding_forward(x, W):
     - out: Array of shape (N, T, D) giving word vectors for all input words.
     - cache: Values needed for the backward pass
     """
-    out, cache = None, None
     ##############################################################################
     # TODO: Implement the forward pass for word embeddings.                      #
     #                                                                            #
@@ -237,7 +236,6 @@ def word_embedding_backward(dout, cache):
     Returns:
     - dW: Gradient of word embedding matrix, of shape (V, D).
     """
-    dW = None
     ##############################################################################
     # TODO: Implement the backward pass for word embeddings.                     #
     #                                                                            #
@@ -293,12 +291,27 @@ def lstm_step_forward(x, prev_h, prev_c, Wx, Wh, b):
     - next_c: Next cell state, of shape (N, H)
     - cache: Tuple of values needed for backward pass.
     """
-    next_h, next_c, cache = None, None, None
     #############################################################################
     # TODO: Implement the forward pass for a single timestep of an LSTM.        #
     # You may want to use the numerically stable sigmoid implementation above.  #
     #############################################################################
-    pass
+
+    N, H = prev_h.shape
+
+    # activations
+    A = x.dot(Wx) + prev_h.dot(Wh) + b
+
+    # gates
+    input_gate, forget_gate = sigmoid(A[:, :H]), sigmoid(A[:, H:2*H])
+    output_gate, block_gate = sigmoid(A[:, 2*H:3*H]), np.tanh(A[:, 3*H:])
+
+    # next cell state
+    next_c = forget_gate * prev_c + input_gate * block_gate
+
+    # next hidden state
+    next_h = output_gate * np.tanh(next_c)
+
+    cache = (input_gate, forget_gate, output_gate, block_gate, next_c, prev_c, Wx, Wh, x, prev_h)
     ##############################################################################
     #                               END OF YOUR CODE                             #
     ##############################################################################
@@ -323,14 +336,63 @@ def lstm_step_backward(dnext_h, dnext_c, cache):
     - dWh: Gradient of hidden-to-hidden weights, of shape (H, 4H)
     - db: Gradient of biases, of shape (4H,)
     """
-    dx, dprev_h, dprev_c, dWx, dWh, db = None, None, None, None, None, None
     #############################################################################
     # TODO: Implement the backward pass for a single timestep of an LSTM.       #
     #                                                                           #
     # HINT: For sigmoid and tanh you can compute local derivatives in terms of  #
     # the output value from the nonlinearity.                                   #
     #############################################################################
-    pass
+
+    input_gate, forget_gate, output_gate, block_gate, next_c, prev_c, Wx, Wh, x, prev_h = cache
+
+    # there's one more gradient of loss coming from the next hidden state
+    dnext_c += dnext_h * output_gate * (1 - np.tanh(next_c) ** 2)
+
+    # loss grad w.r.t. to previous cell state
+    dprev_c = dnext_c * forget_gate
+
+    # loss grad w.r.t. to input gate
+    grad_input = dnext_c * block_gate
+
+    # loss grad w.r.t. to forget gate
+    grad_forget = dnext_c * prev_c
+
+    # loss grad w.r.t. to output gate
+    grad_output = dnext_h * np.tanh(next_c)
+
+    # loss grad w.r.t. to block gate
+    grad_block = dnext_c * input_gate
+
+    # loss grad w.r.t. to input gate activations
+    grad_a_i = grad_input * input_gate * (1 - input_gate)
+
+    # loss grad w.r.t. to forget gate activations
+    grad_a_f = grad_forget * forget_gate * (1 - forget_gate)
+
+    # loss grad w.r.t. to output gate activations
+    grad_a_o = grad_output * output_gate * (1 - output_gate)
+
+    # loss grad w.r.t. to block gate activations
+    grad_a_g = grad_block * (1 - block_gate ** 2)
+
+    # loss grad w.r.t. to activations
+    grad_a = np.concatenate([grad_a_i, grad_a_f, grad_a_o, grad_a_g], axis=1)
+
+    # loss grad w.r.t. to input data
+    dx = grad_a.dot(Wx.T)
+
+    # loss grad w.r.t. to Wx
+    dWx = x.T.dot(grad_a)
+
+    # loss grad w.r.t. to previous hidden state
+    dprev_h = grad_a.dot(Wh.T)
+
+    # loss grad w.r.t. to Wx
+    dWh = prev_h.T.dot(grad_a)
+
+    # loss grad w.r.t. to biases
+    db = grad_a.sum(axis=0)
+
     ##############################################################################
     #                               END OF YOUR CODE                             #
     ##############################################################################
@@ -360,12 +422,25 @@ def lstm_forward(x, h0, Wx, Wh, b):
     - h: Hidden states for all timesteps of all sequences, of shape (N, T, H)
     - cache: Values needed for the backward pass.
     """
-    h, cache = None, None
     #############################################################################
     # TODO: Implement the forward pass for an LSTM over an entire timeseries.   #
     # You should use the lstm_step_forward function that you just defined.      #
     #############################################################################
-    pass
+    N, T, D = x.shape
+    _, H = h0.shape
+
+    cache = []
+    h = np.zeros([N, T, H])
+    prev_h = h0
+    prev_c = np.zeros([N, H])
+
+    for t in range(T):
+        next_h, next_c, curr_cache = lstm_step_forward(x[:, t, :], prev_h, prev_c, Wx, Wh, b)
+
+        h[:, t, :] = next_h
+        prev_h = next_h
+        prev_c = next_c
+        cache.append(curr_cache)
     ##############################################################################
     #                               END OF YOUR CODE                             #
     ##############################################################################
@@ -388,12 +463,49 @@ def lstm_backward(dh, cache):
     - dWh: Gradient of hidden-to-hidden weight matrix of shape (H, 4H)
     - db: Gradient of biases, of shape (4H,)
     """
-    dx, dh0, dWx, dWh, db = None, None, None, None, None
     #############################################################################
     # TODO: Implement the backward pass for an LSTM over an entire timeseries.  #
     # You should use the lstm_step_backward function that you just defined.     #
     #############################################################################
-    pass
+    N, T, H = dh.shape
+
+    # we need to somehow infer D, will grab it from cache (ugly)
+    x1 = cache[0][-2]
+    D = x1.shape[1]
+    # initializing gradients w.r.t. inputs, weight matrices and biases
+    dx = np.zeros([N, T, D])
+    dWx = np.zeros([D, 4 * H])
+    dWh = np.zeros([H, 4 * H])
+    db = np.zeros(4 * H)
+    # also initializing gradients from the next hidden state amd from the next cell state with zeros
+    dnext_h = np.zeros([N, H])
+    dnext_c = np.zeros([N, H])
+
+    for t in list(range(T))[::-1]:
+        # grad current cache and upstream gradient from loss
+        curr_cache = cache[t]
+        curr_grad_from_y = dh[:, t, :]
+
+        # upstream gradient from hidden state is a sum of gradient from loss
+        # and gradient from the hidden state to the right
+        curr_upstream_grad = curr_grad_from_y + dnext_h
+
+        # perform backward step
+        curr_dx, curr_dprev_h, curr_dprev_c, curr_dWx, curr_dWh, curr_db = \
+        lstm_step_backward(curr_upstream_grad, dnext_c, curr_cache)
+
+        # save current gradient w.r.t. to input
+        dx[:, t, :] = curr_dx
+        # update gradients w.r.t. to weight matrices and biases
+        dWx += curr_dWx
+        dWh += curr_dWh
+        db += curr_db
+        # update gradients from the next hidden state and the next cell state
+        dnext_h = curr_dprev_h
+        dnext_c = curr_dprev_c
+
+    # gradient w.r.t to the initial hidden state
+    dh0 = dnext_h
     ##############################################################################
     #                               END OF YOUR CODE                             #
     ##############################################################################
