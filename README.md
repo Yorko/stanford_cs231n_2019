@@ -44,7 +44,7 @@ To do smth more, I propose 3 variants:
 
 Authors claim that you can pass the course even with typical hardware. However, I recommend to rent a machine with GPU. The most convenient option right now is either Google Colaboratory ([tutorial](https://medium.com/deep-learning-turkey/google-colab-free-gpu-tutorial-e113627b9f5d) on Medium) or even Kaggle Kernels (just switch on GPU in Kernel settings).
 
-**Plan**
+**Plan (to be updated)**
 
 - 09.01.19 – 15.01.19. [Lecture 1](https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [Lecture 2](https://www.youtube.com/watch?v=OoUX-nOEjG0&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=2), [Assignment 1](http://cs231n.github.io/assignments2018/assignment1/) announced
 - 16.01.19 – 22.01.19. [Lecture 3](https://www.youtube.com/watch?v=h7iBpEHGVNc&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=3) and [Lecture 4](https://www.youtube.com/watch?v=h7iBpEHGVNc&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=4)
