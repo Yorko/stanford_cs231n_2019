@@ -1,4 +1,7 @@
-![](https://habrastorage.org/webt/jo/r_/3n/jor_3nbxpo34xn2jdmjbttf7zpk.png)
+![](https://habrastorage.org/webt/lo/lw/cs/lolwcsuyedsd3yx3kgfc18ve3_y.png)
+
+# Kaggle Dataset
+~ The same as a [Kaggle Dataset](https://www.kaggle.com/kashnitsky/cs231n-by-stanford). Convenient to have multiple GPUs running in parallel. Transition to 2019 versions of assignments is in progress.
 
 # Assignment 1
  - [k-Nearest Neighbor (kNN) exercise](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/knn_solution_yorko.ipynb) + [comments on some derivations](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/knn_comments_yorko.ipynb)
