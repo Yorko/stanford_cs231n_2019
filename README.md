@@ -23,7 +23,7 @@
 - to be continued...
 
 ## Passing cs231n together within the [OpenDataScience](http://ods.ai) community
-Next start - from **29.04.2019** till **30.06.2019**
+Next start - from **29.04.2019** till **31.07.2019**
 
 **Main links**
 - The [course](http://cs231n.stanford.edu/) itself 
