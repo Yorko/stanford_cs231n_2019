@@ -108,8 +108,7 @@ venv.bak/
 .idea/
 
 # data
-cs231n/datasets/coco_captioning/
+cs231n/datasets
 
 # other
 assignment1/comments_by_hand
-cs231n/datasets/cifar-10-batches-py
