@@ -22,7 +22,7 @@
 - [Image captioning with LSTMs](http://nbviewer.ipython.org/urls/raw.github.com/Yorko/stanford_cs231n_2018/master/assignment3/LSTM_Captioning_solution_yorko.ipynb)
 - [Network Visualization (PyTorch)](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2019/blob/master/assignment3/NetworkVisualization-PyTorch_yorko.ipynb)
 - [Generative Adversarial Networks (PyTorch)](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2019/blob/master/assignment3/Generative_Adversarial_Networks_PyTorch_yorko.ipynb)
-- Style Transfer (PyTorch), to appear
+- [Style Transfer (PyTorch)](http://nbviewer.ipython.org/urls/raw.github.com/Yorko/stanford_cs231n_2019/master/assignment3/StyleTransfer-PyTorch_yorko.ipynb)
 
 ## Passing cs231n together within the [OpenDataScience](http://ods.ai) community
 Next start - from **29.04.2019** till **31.07.2019**
