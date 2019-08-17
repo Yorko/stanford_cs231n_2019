@@ -22,7 +22,7 @@
 - [Style Transfer (PyTorch)](http://nbviewer.ipython.org/urls/raw.github.com/Yorko/stanford_cs231n_2019/master/assignment3/StyleTransfer-PyTorch_yorko.ipynb)
 
 ## Passing cs231n together within the [OpenDataScience](http://ods.ai) community
-Next start - from **29.04.2019** till **31.07.2019**
+Next start - from **02.12.2019** till **08.03.2020**
 
 **Main links**
 - The [course](http://cs231n.stanford.edu/) itself 
@@ -48,14 +48,14 @@ Authors claim that you can pass the course even with typical hardware. However, 
 
 **Plan**
 
-- 29.04.19 – 05.05.19. [Lecture 1](https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [Lecture 2](https://www.youtube.com/watch?v=OoUX-nOEjG0&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=2)
-- 06.05.19 – 12.05.19. [Lecture 3](https://www.youtube.com/watch?v=h7iBpEHGVNc&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=3) and [Lecture 4](https://www.youtube.com/watch?v=h7iBpEHGVNc&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=4)
-- 13.05.19 – 19.05.19. [Lecture 5](https://www.youtube.com/watch?v=bNb2fEVKeEo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=5) and [Lecture 6](https://www.youtube.com/watch?v=wEoyxE0GP2M&index=6&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
-- 19.05.19 – **A1 due**. You can discuss it in the **#class_cs231n** channel in Slack
-- 20.05.19 – 02.06.19. [Lecture 7](https://www.youtube.com/watch?v=_JB0AO7QxSA&index=7&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [Lecture 8](https://www.youtube.com/watch?v=6SlgtELqOWc&index=8&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
-- 03.06.19 – 16.06.19. [Lecture 9](https://www.youtube.com/watch?v=DAOcjicFr1Y&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=9) and [Lecture 10](https://www.youtube.com/watch?v=6niqTuYFZLQ&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=10)
-- 17.06.19 – 30.06.19. [Lecture 11](https://www.youtube.com/watch?v=nDPWywWRIRo&index=11&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [Lecture 12](https://www.youtube.com/watch?v=6wcs6szJWMY&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=12)
-- 30.06.19 – **A2 due**. You can discuss it in the **#class_cs231n** channel in Slack
-- 01.07.19 – 14.07.19. [Lecture 13](https://www.youtube.com/watch?v=5WoItGTWV54&index=13&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [Lecture 14](https://www.youtube.com/watch?v=lvoHnicueoE&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=14)
-- 15.07.19 – 28.07.19. [Lecture 15](https://www.youtube.com/watch?v=eZdOkDtYMoo) and [Lecture 16](https://www.youtube.com/watch?v=CIfsB_EYsVI&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=16)
-- 31.07.19 – **A3 due**. You can discuss it in the **#class_cs231n** channel in Slack
+- 02.12.19 – 08.12.19. [Lecture 1](https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [Lecture 2](https://www.youtube.com/watch?v=OoUX-nOEjG0&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=2)
+- 09.12.19 – 15.12.19. [Lecture 3](https://www.youtube.com/watch?v=h7iBpEHGVNc&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=3) and [Lecture 4](https://www.youtube.com/watch?v=h7iBpEHGVNc&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=4)
+- 16.12.19 – 22.12.19. [Lecture 5](https://www.youtube.com/watch?v=bNb2fEVKeEo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=5) and [Lecture 6](https://www.youtube.com/watch?v=wEoyxE0GP2M&index=6&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
+- 22.12.19 – **A1 due**. You can discuss it in the **#class_cs231n** channel in Slack
+- 23.12.19 – 12.01.20. [Lecture 7](https://www.youtube.com/watch?v=_JB0AO7QxSA&index=7&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [Lecture 8](https://www.youtube.com/watch?v=6SlgtELqOWc&index=8&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
+- 13.01.20 – 26.01.20. [Lecture 9](https://www.youtube.com/watch?v=DAOcjicFr1Y&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=9) and [Lecture 10](https://www.youtube.com/watch?v=6niqTuYFZLQ&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=10)
+- 27.01.20 – 09.02.20. [Lecture 11](https://www.youtube.com/watch?v=nDPWywWRIRo&index=11&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [Lecture 12](https://www.youtube.com/watch?v=6wcs6szJWMY&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=12)
+- 09.02.20 – **A2 due**. You can discuss it in the **#class_cs231n** channel in Slack
+- 10.02.20 – 23.02.20. [Lecture 13](https://www.youtube.com/watch?v=5WoItGTWV54&index=13&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [Lecture 14](https://www.youtube.com/watch?v=lvoHnicueoE&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=14)
+- 24.02.20 – 08.03.20. [Lecture 15](https://www.youtube.com/watch?v=eZdOkDtYMoo) and [Lecture 16](https://www.youtube.com/watch?v=CIfsB_EYsVI&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=16)
+- 08.03.20 – **A3 due**. You can discuss it in the **#class_cs231n** channel in Slack
