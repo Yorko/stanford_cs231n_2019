@@ -6,7 +6,7 @@ To motivate you to work as hard as Stanford's students, here are actual applicat
 
 ![alt-text-1](https://habrastorage.org/webt/ik/ny/o4/iknyo4fnkbokzoavq6nlsuitc6y.png "title-1") ![alt-text-2](https://habrastorage.org/webt/8t/go/qa/8tgoqaoa1vwmiuagfkx0i4nkjmm.png "title-2")
 
-For the first one (on the left), you take a base image and a style image and "apply the style" to the base image (reminds of Prisma and Artisto, right?). The second example (on the right) is a random image, gradually perturbed in a way that a neural network classifies it more and more confidently as a gorilla. DIY Depp Dream, isn't it? And it's all math under the hood, it's cool to figure out how it all works. You'll get to this understanding if you pass cs231n, it'll be hard but super cool!
+For the first one (on the left), you take a base image and a style image and "apply the style" to the base image (reminds of Prisma and Artisto, right?). The second example (on the right) is a random image, gradually perturbed in a way that a neural network classifies it more and more confidently as a gorilla. DIY Depp Dream, isn't it? And it's all math under the hood, it's cool to figure out how it all works. You'll get to this understanding if you pass cs231n, it'll be hard but at the same time an exciting journey from efficient kNN implementation to these fascinating applications.   
 
 # Assignment 1
  - [k-Nearest Neighbor (kNN) exercise](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/knn_solution_yorko.ipynb) + [comments on some derivations](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/knn_comments_yorko.ipynb)
