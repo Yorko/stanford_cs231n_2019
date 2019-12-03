@@ -36,7 +36,7 @@ Next start - from **02.12.2019** till **08.03.2020**
 - The [course](http://cs231n.stanford.edu/) itself 
 - Video-lectures, youtube [channel](https://goo.gl/pcj7c8). Prerequisites are given in the 1st lecture  
 - [Syllabus](http://cs231n.stanford.edu/syllabus.html) with assignments
-- Unofficial [lecture notes](https://github.com/mbadry1/CS231n-2017-Summary)
+- Unofficial [lecture notes](https://github.com/mbadry1/CS231n-2017-Summary) by [Mahmoud Badry](https://github.com/mbadry1)
 - For Russian-speaking audience, a good alternative is the Deep Learning course [dlcourse.ai](https://dlcourse.ai/) lead by Simon Kozlov, [sim0nsays](https://twitter.com/sim0nsays?lang=en)
 
 **Assignments**
