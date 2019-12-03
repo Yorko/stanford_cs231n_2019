@@ -1,5 +1,13 @@
 ![](https://habrastorage.org/webt/lo/lw/cs/lolwcsuyedsd3yx3kgfc18ve3_y.png)
 
+Stanford's [course cs231n](http://cs231n.stanford.edu/) "Convolutional Neural Networks for Visual Recognition" is one of the best ways to dive into Deep Learning in general, in particular, into Computer Vision. If you plan to excel in another subfiled of DL (say, NLP or Reinforcement Learning), we still recommend that you start with cs231n, because it gives you fundamental understanding and hands-on skills. Beware, the course is very challenging! 
+
+To motivate you to work as hard as Stanford's students, here are actual applications that you'll implement in A3 - style transfer and class visualization. 
+
+![alt-text-1](https://habrastorage.org/webt/ik/ny/o4/iknyo4fnkbokzoavq6nlsuitc6y.png "title-1") ![alt-text-2](https://habrastorage.org/webt/8t/go/qa/8tgoqaoa1vwmiuagfkx0i4nkjmm.png "title-2")
+
+For the first one (on the left), you take a base image and a style image and "apply the style" to the base image (reminds of Prisma and Artisto, right?). The second example (on the right) is a random image, gradually perturbed in a way that a neural network classifies it more and more confidently as a gorilla. DIY Depp Dream, isn't it? And it's all math under the hood, it's cool to figure out how it all works. You'll get to this understanding if you pass cs231n, it'll be hard but super cool!
+
 # Assignment 1
  - [k-Nearest Neighbor (kNN) exercise](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/knn_solution_yorko.ipynb) + [comments on some derivations](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/knn_comments_yorko.ipynb)
  - [Softmax classifier](https://nbviewer.jupyter.org/github/Yorko/stanford_cs231n_2018/blob/master/assignment1/softmax_solution_yorko.ipynb)
@@ -28,23 +36,19 @@ Next start - from **02.12.2019** till **08.03.2020**
 - The [course](http://cs231n.stanford.edu/) itself 
 - Video-lectures, youtube [channel](https://goo.gl/pcj7c8). Prerequisites are given in the 1st lecture  
 - [Syllabus](http://cs231n.stanford.edu/syllabus.html) with assignments
+- Unofficial [lecture notes](https://github.com/mbadry1/CS231n-2017-Summary)
+- For Russian-speaking audience, a good alternative is the Deep Learning course [dlcourse.ai](https://dlcourse.ai/) lead by Simon Kozlov, [sim0nsays](https://twitter.com/sim0nsays?lang=en)
 
 **Assignments**
 
-There are 3 big and tough assignments in this course. We’ll have deadlines and exemplar solutions (by me or smb else) to be discussed.
+There are 3 big and tough assignments in this course. The biggest challenge is to actually do these assignments on your own because solutions are easily accessible anywhere on the Internet and are even shared by me in this repo. 
 
 **Competitions & projects**
 
-In the original course they've got [projects](http://cs231n.stanford.edu/project.html).
-You can also complete one, but actually, lectures and assignments is already a good workload.
-To do smth more, I propose 3 variants:
-- a personal pet-project (will be nice to show in your portfolio) [here](https://digits-draw-recognize.herokuapp.com/) is an example by @artgor and a [description](https://habrahabr.ru/company/ods/blog/335998/) in :ru: (you can translate it, but the app is self-explanatory)
-- a Kaggle competition. Maybe a playground one, to start with. This one, persay: ["Dog Breed Identification"](https://www.kaggle.com/c/dog-breed-identification) 
-- you can also write a tutorial
+In the original course they've got [projects](http://cs231n.stanford.edu/project.html). You can also complete one, but actually, lectures and assignments is already a good workload. So my advice is to first cope with assignments and then you can go on with pet projects or Kaggle.
 
 **GPUs**
-
-Authors claim that you can pass the course even with typical hardware. However, I recommend to rent a machine with GPU. The most convenient option right now is either Google Colaboratory ([tutorial](https://medium.com/deep-learning-turkey/google-colab-free-gpu-tutorial-e113627b9f5d) on Medium) or even Kaggle Kernels (just switch on GPU in Kernel settings).
+For some parts of the 3rd assignment, you'll need GPUs. Kaggle Kernels or Google Colaboratory will do.
 
 **Plan**
 
