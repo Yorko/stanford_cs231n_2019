@@ -33,7 +33,7 @@ nbconvert==5.4.1
 nbdime==1.1.1
 nbformat==4.4.0
 notebook==6.4.1
-numpy==1.16.2
+numpy==1.21.0
 pandocfilters==1.4.2
 parso==0.3.4
 pexpect==4.6.0
